@@ -1,0 +1,26 @@
+{
+    "name": "Gesture Recognition",
+    "dataset": "NVGestures",
+    "phase": "test",
+    "data": {
+      "optical_flow": false,
+      "type": "normal",
+      "n_classes": 25,
+      "n_frames": 40,
+      "data_path": "path/to/NVGestures",
+      "result_dir": "./result",
+      "batch_size": 8
+    },
+    "solver": {
+      "workers": 4
+    },
+    "network":{
+      "backbone": "resnet",
+      "pretrained": true,
+      "ff_size": 1024,
+      "n_head": 8,
+      "dropout2d" : 0.1,
+      "dropout1d": 0.5,
+      "n_module": 6
+    }
+}
